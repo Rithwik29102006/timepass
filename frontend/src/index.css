@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Card Utility ────────────────────────────────────────────────────── */
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100;
+  }
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100 transition-shadow duration-200 hover:shadow-card-hover;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 transition-all duration-150;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm;
+    @apply hover:bg-primary-700 active:scale-[0.98] transition-all duration-150;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700;
+    @apply hover:bg-gray-50 active:scale-[0.98] transition-all duration-150;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-semibold;
+  }
+  .section-title {
+    @apply text-lg font-bold text-gray-900;
+  }
+  .section-subtitle {
+    @apply text-sm text-gray-500 mt-0.5;
+  }
+}
+
+/* ─── Leaflet Light Theme ─────────────────────────────────────────────── */
+.leaflet-container {
+  border-radius: 0.75rem;
+  z-index: 1;
+  background: #f9fafb !important;
+}
+.leaflet-control-attribution {
+  background: rgba(255,255,255,0.85) !important;
+  color: #9ca3af !important;
+  font-size: 9px !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+}
+.leaflet-control-attribution a {
+  color: #6b7280 !important;
+}
+.leaflet-control-zoom a {
+  background: white !important;
+  color: #374151 !important;
+  border-color: #e5e7eb !important;
+  border-radius: 8px !important;
+}
+.leaflet-control-zoom a:hover {
+  background: #f3f4f6 !important;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  border: 1px solid #e5e7eb !important;
+}
+.leaflet-popup-tip {
+  box-shadow: none !important;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* ─── Selection ───────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(34, 197, 94, 0.15);
+  color: #111827;
+}
