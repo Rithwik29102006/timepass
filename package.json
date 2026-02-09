@@ -1,0 +1,7 @@
+{
+  "name": "isb3",
+  "private": true,
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
