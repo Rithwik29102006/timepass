@@ -11,9 +11,7 @@ const io = new Server(server, {
 });
 
 app.use(cors());
-app.use(express.json());
-
-// ─── In-Memory Data Store ────────────────────────────────────────────────────
+Data Store ────────────────────────────────────────────────────
 const devices = [];
 const shipments = [];
 const telemetry = [];
